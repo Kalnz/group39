@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>BotController</servlet-name>
+        <servlet-class>chat.bot.BotController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InitialQuestion</servlet-name>
+        <servlet-class>chat.bot.InitialQuestion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BotController</servlet-name>
+        <url-pattern>/bot</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InitialQuestion</servlet-name>
+        <url-pattern>/initial</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

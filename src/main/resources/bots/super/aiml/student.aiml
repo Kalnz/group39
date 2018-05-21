@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>What is the pre-requisites for Programming 2</pattern>
+<template>you are required to complete COMP500 or ENSE501.</template>
+</category>
+<category><pattern>What is the pre-requisites for COMP503</pattern>
+<template>you are required to complete COMP500 or ENSE501.</template>
+</category>
+<category><pattern>What is the pre-requisites for Software Development Practice</pattern>
+<template>you are required to complete COMP603 or COMP610, COMP600.</template>
+</category>
+<category><pattern>What is the pre-requisites for Software COMP602</pattern>
+<template>you are required to complete COMP603 or COMP610, COMP600.</template>
+</category>
+<category><pattern>What is the pre-requisites for Program Design and Construction(COMP603)?</pattern>
+<template>you are required to complete COMP503 or  INFS600</template>
+</category>
+<category><pattern>What is the pre-requisites for COMP603</pattern>
+<template>you are required to complete COMP503 or  INFS600</template>
+</category>
+<category><pattern>What is the pre-requisites for Operating Systems</pattern>
+<template>you are required to complete COMP502, COMP503, or COMP610</template>
+</category>
+<category><pattern>What is the pre-requisites for COMP604</pattern>
+<template>you are required to complete COMP502, COMP503, or COMP610</template>
+</category>
+<category><pattern>What is the pre-requisites for Data and Process Modelling</pattern>
+<template>you are required to complete COMP500.</template>
+</category>
+<category><pattern>What is the pre-requisites for INFS600</pattern>
+<template>you are required to complete COMP500.</template>
+</category>
+<category><pattern>What is the pre-requisites for Logical Database Design</pattern>
+<template>you are required to complete COMP500 or ENSE501.</template>
+</category>
+<category><pattern>What is the pre-requisites for INFS601</pattern>
+<template>you are required to complete COMP500 or ENSE501.</template>
+</category>
+</aiml>

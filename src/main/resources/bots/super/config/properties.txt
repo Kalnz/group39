@@ -1,0 +1,8 @@
+url:http://google.com
+name:CHAT Bot
+email:bot@Chat.com
+gender:male
+botmaster:Student
+organization:Student
+version:0.0.1
+
