@@ -29,7 +29,17 @@
                                             <img src="http://placehold.it/50/55C1E7/fff&text=Bot" alt="User Avatar" class="img-circle" />
                                         </span>
                                         <div class="chat-body clearfix">
-                                            <p id="answer">
+                                            &nbsp; <p id="answer">
+                                               Hello ???
+                                            </p>
+                                        </div>
+                                    </li>
+                                    
+                                     <li class="left clearfix"><span class="chat-img pull-left">
+                                            <img src="http://placehold.it/50/55C1E7/333&text=U" alt="User Avatar" class="img-circle" />
+                                        </span>
+                                        <div class="chat-body clearfix">
+                                            &nbsp; <p id="human">
                                                
                                             </p>
                                         </div>
@@ -58,14 +68,17 @@
           <script type="text/javascript">
             $("#btn-chat").click(function () {
                 $("#answer").html("");
+                $("#human").html("");
                 var val=$("#btn-input").val();
                 $.post("bot",
                         {
                             ques: val
                         },
                         function (data, status) {
-                            console.log("Data: " + data + "\nStatus: " + status);
+                           // console.log("Data: " + data + "\nStatus: " + status);
+                           $('#btn-input').val('');
                             $("#answer").html(" "+data);
+                            $("#human").html(val);
                         });
             });
             

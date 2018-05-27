@@ -1,5 +1,9 @@
 package chat.bot;
 
+import com.google.code.chatterbotapi.ChatterBot;
+import com.google.code.chatterbotapi.ChatterBotFactory;
+import com.google.code.chatterbotapi.ChatterBotSession;
+import com.google.code.chatterbotapi.ChatterBotType;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,6 +23,7 @@ public class BotController extends HttpServlet {
     private static final boolean TRACE_MODE = false;
     static String botName = "super";
     Chat chatSession;
+    ChatterBotSession bot2session;
 
     @Override
     public void init() {
@@ -27,11 +32,19 @@ public class BotController extends HttpServlet {
         URL resource = classLoader.getResource("");
 
         String resourcesPath = new File(resource.getFile()).getAbsolutePath();
-        System.out.println("------  " + resourcesPath);
+
         MagicBooleans.trace_mode = TRACE_MODE;
         Bot bot = new Bot(botName, resourcesPath);
         chatSession = new Chat(bot);
         bot.brain.nodeStats();
+         // Add ML & NLP Bot session
+         ChatterBotFactory factory = new ChatterBotFactory();
+         try{
+         ChatterBot mlBot = factory.create(ChatterBotType.PANDORABOTS, "b0dafd24ee35a477");
+          bot2session = mlBot.createSession();
+         }catch (Exception ex) {
+            
+        }
     }
 
     /**
@@ -67,6 +80,14 @@ public class BotController extends HttpServlet {
                 response = response.replace("&gt;", ">");
             }
             System.out.println("Robot : " + response);
+             if(response==null || response.contains("I have no answer")){
+                // Pass to ML to learn and do the process
+                try{
+               response= bot2session.think(ques);
+                }catch (Exception ex) {
+                    
+                }
+            }
             out.println(response);
 
         } finally {

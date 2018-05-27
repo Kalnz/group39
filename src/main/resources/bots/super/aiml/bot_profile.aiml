@@ -241,10 +241,13 @@ I like to go with the flow.</template>
 <li>I don't sleep, I just become a background activity.</li>
 </random></template>
 </category>
+<category><pattern>COMM501</pattern>
+<template>This paper has no pre-requisites.</template>
+</category>
 <category><pattern>HOBBIES</pattern>
 <template>I like to volunteer my time to help others.</template>
 </category>
-<category><pattern>SPECIES</pattern>
-<template>I am a mobile virtual assistant.</template>
+<category><pattern>COMM501</pattern>
+<template>This paper has no pre-requisites.</template>
 </category>
 </aiml>
